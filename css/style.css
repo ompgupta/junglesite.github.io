@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden; 
+    min-height: 100vh;
+    background-size: cover;
+font-family: 'Varela Round', sans-serif;
+
+}
+.head{
+   /* font-size: 30px;  */
+   position: relative;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  z-index: 1000;  
+}
+#logo{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 900;
+    color: #307b99;
+  
+}
+.fa{
+    color:#307b99;
+    font-size: 2.5rem;
+    display: none;
+    cursor: pointer;
+}
+#check{
+    display: none;
+}
+#check:checked ~ ul{
+    left: 0%;
+     transition: 0.5s all ease;
+}
+.head ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head ul li{
+    list-style: none;
+    margin-left: 30px;
+}
+.head ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 10px 10px;
+    border-radius:27px;
+    color: #307b99;
+
+}
+
+.head ul li a:hover, #active{
+    color: white;
+    background:#307b99;
+}
+.div{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(to bottom,white,rgb(36, 87, 255));
+}
+.div::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 50px;
+    /* background-color: red; */
+    z-index: 10;
+    background: linear-gradient(to top,#173b49,transparent);
+}
+.div img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #4c00ff;
+    /* object-fit: cover;
+    pointer-events: none; */
+}
+#text{
+position: absolute;
+font-size: 30px;
+line-height: 1.9;
+color: rgb(91, 26, 151);
+letter-spacing:5px ;
+font-weight: 600;
+text-align: center;
+transform: translateY(-20%);
+}
+#text span{
+font-size: 5rem;
+font-family: 'Lobster', cursive;
+
+}
+#btn{
+text-decoration: none;
+padding: 10px 25px;
+height:50px;
+transform: translateY(100px);
+/* color:  #307b99; */
+background: rgb(255, 255, 255);
+border-radius: 40px;
+font-size: 1.2rem;
+font-weight: 700;
+letter-spacing: 2px;
+}
+#btn a{
+    color:#307b99;
+    text-decoration: none;
+}
+#btn:hover{
+    background-color:#307b99;color: white;
+}
+.footer{
+    position: relative;
+    background: #173b49;
+    height: auto;
+    padding: 100px;
+    color: white;
+}
+.footer h1{
+    padding-bottom: 20px;
+    font-size: 50px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width:480px) {
+    .fa {
+        display: inline;
+    }
+    .head #logo{
+  
+    }
+   .head ul{
+        /* display: fixed; */
+        width: 100%;
+        position: fixed;
+        height: 100vh;
+       background-color: rgb(28, 67, 102);
+       position: absolute;
+       top: 80px;
+       left: -100%;
+       display: block;
+    }
+    .head ul li a{
+        color: white;
+        text-decoration: black;
+    }
+    .head ul li a:hover, #active{
+        color:rgb(0, 255, 221);
+        background: none;
+        text-decoration: initial;
+        text-decoration: lavenderblush;
+    }
+    li{
+        margin-top: 60px;
+    }
+    #text{
+        font-size: 18px;
+    }
+    #text span{
+        font-size: 3.5rem;
+    }
+}
